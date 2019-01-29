@@ -1,0 +1,9 @@
+/* RESET */
+
+/* * = selecteur universel */
+*{
+	margin:0;
+	padding:0;
+	/* pour avoir des dimensions bordures et padding inclus */
+	
+}
