@@ -17,7 +17,7 @@ git pull
 ```
 ---
 
-##### *Faire des modifications dans mon code*
+#### *Faire des modifications dans mon code.*
 
 ###### Exemple: 
 
