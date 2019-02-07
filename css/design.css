@@ -4,28 +4,77 @@
 /*#888844 */
 
 body{
+	margin:0;
+	padding:0;
+	perspective: 1px;
+	transform-style: preserve-3d;
+	height:100%;
 	font-family: 'Yanone Kaffeesatz', sans-serif;
-
-	background-color:#282723;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	background: black;
 	display: block;
 }
+
+header{
+	box-sizing: border-box;
+	min-height: 100vh;
+	padding: 30vw 0 5vw;
+	position: relative;
+	transform-style: inherit;
+	width: 100vw;
+}
+
+header h1{
+	margin-top: -100px;
+}
+
+header, header:before{
+	background: 50% 50% / cover;
+}
+
+header::before{
+	bottom: 0;
+	content:"";
+	left:0;
+	position: absolute;
+	right:0;
+	top:0;
+	display:block;
+	background-image: url("../img/insecte.jpg");
+	background-size: cover;
+	transform-origin: center center 0;
+	transform: translateZ(-1px) scale(2);
+	z-index: -1;
+	min-height: 100vh;
+}
+
+header * {
+	font-weight: normal;
+	letter-spacing: 0.2em;
+	text-align: center;
+	margin:0;
+	padding:1em 0;
+}
+
 a{
 	color:inherit;/* forcer l'héritage du style parent */
 	text-decoration:none;
-	color:black;
+	color:white;
 }
 p{
-	color:black;
+	color:white;
 	margin-top: -5px;
 	font-size: 20px;
 }
 .adresse{
-	color:black;
+	color:white;
+	font-size:25px;
 }
 
 h1{
 	font-weight: bold;
-	color:#white;
+	color:white;
 	padding-bottom: 30px;
 	padding-left: 55px;
 	padding-top: 30px;
@@ -33,21 +82,20 @@ h1{
 }
 h2{
 	font-weight: bold;
-	color:#white;
+	color:white;
 	/*height: 180px;*/
-	padding-bottom:40px;
-	height: 215px;
+	text-align: center;
 }
 h3{
 	font-weight: bold;
-	color:#white;
+	color:white;
 	height: 80px;
 	font-size: 30px;
 }
 
 h4{
 	font-weight: bold;
-	color:#white;
+	color:white;
 
 }
 h5{
@@ -61,9 +109,10 @@ h6{
 }
 
 .push{
-padding-left:336px;
-padding-top:30px;
 font-size: 20px;
+text-align:center;
+padding-bottom: 20px;
+width:100%;
 
 }
 .button{
@@ -122,6 +171,21 @@ margin-left: 3px;
 	width: 50%;
 	height: 50%;
 }
+
+.container-black{
+	background-color: black;
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.row-slider{
+width: 50%;
+height: 50%;
+margin-left: auto;
+margin-right: auto;
+}
+
 #corps{
 	background-color:white;
 	margin-left: auto;
@@ -146,6 +210,12 @@ margin-left: 3px;
 
 	margin:right;
 	margin:left;
+}
+
+.contact-img{
+   width: auto;
+   height: 100%;
+
 }
 
 .image{
@@ -183,7 +253,7 @@ margin-left: 3px;
 nav{
     top: 0;
     margin: 0; padding: 0;
-    color: black;
+    color: white;
    float:right;
 }
 
@@ -192,7 +262,7 @@ span{
 	font-size:15px;
 	box-shadow:rgba(0, 0, 0, 0.3);
 	font-weight:bold;
-	color:#white;
+	color:white;
     }
 
 .navigation{
@@ -221,6 +291,7 @@ span{
 	width: 100%;
 	background-color:#black;
 }
+
 .navigation a{
 
 }
@@ -230,9 +301,6 @@ span{
 }
 .navigation li a{
 	list-style-type: none;
-}
-.liste{
-	font-size: 20px;
 }
 
 .large-4columns{
@@ -462,7 +530,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 .button3{
-	padding-right:50px;
+	padding-right: 2%
 }
 
 .large-12columns{
@@ -492,8 +560,9 @@ color:#white;
 width:100%;
 overflow:auto;
 text-align:center;
-padding-bottom: 50px;
-padding-top:50px;
+padding-bottom: 1px;
+padding-top:1px;
+margin-top: 50px;
 background-color: black;
 }
 
@@ -533,6 +602,7 @@ background-color: black;
 .hautdepage {
 width : 100%;
 display:inline-block;
+background: black;
 }
 /*
 .hautdepage:hover{
@@ -631,19 +701,19 @@ padding-bottom:10%;
 	font-size:35px;
 	margin-left:auto;
 	margin-right:auto;
-	color:white;
+	color:black;
 	width:60%;
 	padding-top:200px;
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .bloc{
 	width:100%;
-	height: 500px;
-	background-image: url("../img/plante02.jpg");
-	display:block;
-	overflow:hidden;
-	background-repeat: no-repeat;
-	background-size: 120%;
+	position:relative;
 }
+
 .bloc1{
 	width:100%;
 	height: 700px;
@@ -670,8 +740,6 @@ padding-bottom:10%;
 }
 .bloc8{
 	width:100%;
-	height: 290px;
-	padding-top:50px;
 	display:block;
 	color:black;
 	overflow: hidden;
@@ -684,15 +752,12 @@ padding-bottom:10%;
 	overflow: hidden;
 }
 .bloc20{
-	padding-left:200px;
-	padding-top:50px;
-	width:100%;
-	height: 2000px;
-	background-color:;
-	display:block;
-	color:black;
-	overflow: hidden;
-	}
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
 .bloc1 p{
 	color:black;
 	text-align: justify;
@@ -767,8 +832,8 @@ padding-top: 16px;
 	margin-left: auto;
 	margin-right:auto;
 	text-align: justify;
-	padding-top:30px;
-	padding-left:98px;
+
+	padding-bottom:5%;
 	font-size:30px;
 	color:white;
 }
@@ -1028,6 +1093,214 @@ padding-top: 16px;
     color: #888844;
 }
 
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+  background: #black;
+}
+
+.hovereffect .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  padding: 50px 20px;
+}
+
+.hovereffect img {
+  display: block;
+  position: relative;
+  max-width: none;
+  width: calc(100% + 20px);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-10px,0,0);
+  transform: translate3d(-10px,0,0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.hovereffect:hover img {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.hovereffect h2 {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  overflow: hidden;
+  padding: 0.5em 0;
+  background-color: transparent;
+}
+
+.hovereffect h2:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  content: '';
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(-100%,0,0);
+  transform: translate3d(-100%,0,0);
+}
+
+.hovereffect:hover h2:after {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.hovereffect a, .hovereffect p {
+  color: #FFF;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(100%,0,0);
+  transform: translate3d(100%,0,0);
+}
+
+.hovereffect:hover a, .hovereffect:hover p {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.navbar {
+  padding:0rem;
+  margin-bottom:2rem;
+}
+
+.dropdown .dropdown-menu {
+  border-radius:0;
+ }
+
+
+/* Medium devices (tablets, 768px and up)
+The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  border-radius:0;
+ }
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    font-size: 26px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+    height: 100vh;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+
+.navbar{
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top:100px;
+  color: #ffffff;
+  background:#000000;
+  font-size:20px;
+  font-weight: bold;
+  font-family: Arial;
+  text-transform: uppercase;
+
+}
+
+.parallax-wrapper {
+    width: 100vw;
+    height: 50vh;
+    padding-top: 20vh;
+    box-sizing: border-box;
+}
+
+.parallax-wrapper::before {
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    top: 60vh;
+    left: 0;
+    background-image: url("../img/insecte-resize.jpg");
+    position: absolute;
+		background-repeat:no-repeat;
+		background-position:center center;
+    z-index: -1;
+    transform: translateZ(-1px) scale(2);
+}
+
+.content {
+    margin: 0 auto;
+    padding: 50px;
+    width: 50%;
+    background: rgb(33, 37, 41);
+    opacity:0.95;
+}
+
+.column {
+  float: left;
+  width: 10%;
+  display: none; /* Hide columns by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Add a grey background color on mouse-over */
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background color to the active button */
+.btn.active {
+  background-color: #666;
+   color: white;
+}
+
+
 footer{
 	height: 320px;
 	width: 100%;
@@ -1037,7 +1310,9 @@ footer{
 	padding-top:35px;
 	font-size: 15px;
 	clear: both;
+	text-align: center;
 }
 #footer-navigation{
 	text-align: center;
+	font-size:25px;
 }
