@@ -67,21 +67,20 @@ p{
 	margin-top: -5px;
 	font-size: 20px;
 }
-.adresse{
-	color:white;
-	font-size:25px;
-}
 
 h1{
+	font-size:90px;
 	font-weight: bold;
 	color:white;
 	padding-bottom: 30px;
 	padding-left: 55px;
 	padding-top: 30px;
 	float:left;
+	font-weight: roboto
+	font-family: 'Roboto', sans-serif;
+ font-family: 'Shadows Into Light', cursive;
 }
 h2{
-	font-weight: bold;
 	color:white;
 	/*height: 180px;*/
 	text-align: center;
@@ -212,12 +211,6 @@ margin-right: auto;
 	margin:left;
 }
 
-.contact-img{
-   width: auto;
-   height: 100%;
-
-}
-
 .image{
 	height:40%;
 	width: 40%;
@@ -259,7 +252,7 @@ nav{
 
 span{
 	display:block;
-	font-size:15px;
+	font-size:13px;
 	box-shadow:rgba(0, 0, 0, 0.3);
 	font-weight:bold;
 	color:white;
@@ -684,7 +677,6 @@ padding-bottom:10%;
 	width: 50%;
 	height: 100%;
 	display:inline-block;
-	background-color: black;
 }
 
 .titre{
@@ -727,7 +719,7 @@ padding-bottom:10%;
 	height: 700px;
 	background-color:;
 	display:block;
-	color:black;
+
 	overflow: hidden;
 }
 .bloc7{
@@ -735,7 +727,6 @@ padding-bottom:10%;
 	height: 700px;
 	background-color:;
 	display:block;
-	color:black;
 	overflow: hidden;
 }
 .bloc8{
@@ -772,6 +763,7 @@ padding-bottom:10%;
 }
 .taille-image2{
 	width:500px;
+	padding-bottom: 6px;
 }
 .taille-image2 :hover{
 	width:500px;
@@ -1298,6 +1290,67 @@ body {
 .btn.active {
   background-color: #666;
    color: white;
+}
+
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.content-header{
+  font-family: 'Oleo Script', cursive;
+  color:white;
+  font-size: 45px;
+}
+
+.section-content{
+  text-align: center;
+
+}
+#contact{
+
+    font-family: 'Teko', sans-serif;
+  padding-top: 60px;
+  width: 100%;
+  width: 100vw;
+  height: 550px;
+  /*background: #3a6186; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #3a6186 , #89253e); /* Chrome 10-25, Safari 5.1-6 */
+/*background: linear-gradient(to left, #3a6186 , #89253e); /* W3C, IE 10+/ Ede, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color : #fff;
+}
+.contact-section{
+  padding-top: 40px;
+}
+.contact-section .col-md-6{
+  width: 50%;
+}
+
+.form-line{
+  border-right: 1px solid #B29999;
+}
+
+.form-group{
+  margin-top: 10px;
+}
+label{
+  line-height: 1em;
+  font-weight: normal;
+}
+
+textarea.form-control {
+    height: 135px;
+   /* margin-top: px;*/
+}
+
+.submit{
+  font-size: 1.1em;
+  float: right;
+  width: 150px;
+  background-color: transparent;
+  color: #fff;
+
 }
 
 
